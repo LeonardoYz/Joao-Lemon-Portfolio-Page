@@ -1,6 +1,8 @@
 <div>
-  <img width="15%" src="./readme-files/jl-logo.svg">
-  <img align="right" width="25%" src="./readme-files/lemon-logo.svg">
+  <a href="https://leonardoyz.github.io/Joao-Lemon-Portfolio-Page/" target="_blank">
+    <img width="15%" src="./readme-files/jl-logo.svg">
+    <img align="right" width="25%" src="./readme-files/lemon-logo.svg">
+  </a>
 </div>
 <br>
 
