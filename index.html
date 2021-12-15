@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio UX/UI Designer - João Lemon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/lemon-logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <title>João Lemon - UX/UI Designer</title>
+  </head>
+  <body>
+    <div class="preloading">
+      <img
+        class="preloading__lemon-icon"
+        src="assets/images/lemon-loader.svg"
+        alt=""
+        aria-label="Tela De Carregamento"
+      />
+      <p>Aguarde um pouquinho … Estou preparando a limonada</p>
+    </div>
+
+    <div class="wrapper">
+      <header class="header" id="header">
+        <nav class="header__navigation container">
+          <div class="header__logo">
+            <a href="#home">
+              <img
+                class="logo"
+                src="assets/images/logo.svg"
+                alt="Logo João Lemon"
+              />
+            </a>
+          </div>
+
+          <!--=== MENU ===-->
+          <div class="header__menu">
+            <ul>
+              <li><a href="#home">Inicio</a></li>
+              <li><a href="subpages/portfolio.html">Portfolio</a></li>
+              <li><a href="subpages/about.html">Sobre</a></li>
+            </ul>
+          </div>
+
+          <!--=== /MENU ===-->
+          <div class="header__menu--mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!--=== HOME ===-->
+        <section class="section" id="home">
+          <div class="container">
+            <div class="home__text">
+              <h1 class="title--h1">Olá!</h1>
+              <p class="paragraph">
+                Meu nome é <span class="text--highlighted">João Lemon</span>,
+                sou designer de <span class="text--highlighted">UX e UI</span>.
+                Nulla vulputate, ex in tincidunt consequat, dui metus luctus
+                purus, ut dapibus quam augue sit amet leo. Phasellus sit amet
+                purus in elit efficitur viverra.
+              </p>
+
+              <div class="home__button">
+                <button
+                  type="button"
+                  class="button--green"
+                  onclick="showAndRemoveModalBudget()"
+                >
+                  solicite um orçamento
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="home__scroll-down">
+            <div class="home__scroll-down--icon">
+              <img
+                src="assets/images/arrow-down.svg"
+                alt=""
+                aria-label="Indicar Scroll"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!--=== BUDGET FORM ===-->
+        <div class="budget-modal--overlay"></div>
+        <form class="form" action="#">
+          <div class="form__text">
+            <button
+              type="button"
+              class="close-button"
+              id="close-button--budget"
+              onclick="showAndRemoveModalBudget()"
+              aria-label="Botão Fechar"
+            >
+              <i class="fas fa-times close-icon"></i>
+            </button>
+            <h3 class="title--h3">Solicite um Orçamento</h3>
+            <p>
+              Por favor informe os dados abaixo e eu entrarei em contato com
+              você o mais breve possível.
+            </p>
+          </div>
+
+          <div class="form__inputs">
+            <div class="form__input--box">
+              <label class="form__label" for="name-input">Nome</label>
+              <input class="form__input" type="text" id="name-input" />
+            </div>
+
+            <div class="form__input--box">
+              <label class="form__label" for="email-input">Email</label>
+              <input class="form__input" type="email" id="email-input" />
+            </div>
+
+            <div class="form__input--box">
+              <label class="form__label" for="phone-input">Telefone</label>
+              <input class="form__input" type="tel" id="phone-input" />
+            </div>
+
+            <div class="form__input--box">
+              <label class="form__label" for="website-input">Site</label>
+              <input class="form__input" type="text" id="website-input" />
+            </div>
+
+            <div class="form__input--box" id="form__input--message">
+              <label class="form__label" for="message-input"
+                >Descreva abaixo o projeto na qual você precisa de
+                orçamento:</label
+              >
+              <textarea
+                id="message-input"
+                cols="0"
+                rows="5"
+                class="form__input"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form__button">
+            <button type="submit" class="button--green">Enviar</button>
+          </div>
+        </form>
+
+        <!--=== PROJECTS PREVIEW | SLIDER ===-->
+        <section class="section" id="projects-preview">
+          <div class="preview__background"></div>
+          <div class="container--slider">
+            <ul class="projects__list" id="slider__list">
+              <li class="projects__item" data-slide="1">
+                <div class="projects__text">
+                  <h2 class="title--h2">Startup Rocketz Website</h2>
+                  <p class="paragraph">
+                    UX, UI e WordPress para aceleradora de startups.
+                  </p>
+
+                  <div class="projects__button--green">
+                    <a class="button--green" href="subpages/manage-it.html"
+                      >ver projeto</a
+                    >
+                  </div>
+                </div>
+
+                <div class="projects__image">
+                  <img
+                    src="assets/images/image-1.jpg"
+                    alt="Imagem do projeto Startup Rocketz"
+                  />
+
+                  <div class="projects__button--black">
+                    <a class="button--black" href="subpages/manage-it.html"
+                      >visitar site
+                      <i class="fas fa-arrow-right button__arrow-icon"></i
+                    ></a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="projects__item" data-slide="2">
+                <div class="projects__text">
+                  <h2 class="title--h2">Manage It! Aplicativo Mobile</h2>
+                  <p class="paragraph">
+                    UX, UI e Prototipação para aplicativo mobile.
+                  </p>
+
+                  <div class="projects__button--green">
+                    <a class="button--green" href="subpages/manage-it.html"
+                      >ver projeto</a
+                    >
+                  </div>
+                </div>
+
+                <div class="projects__image">
+                  <img
+                    src="assets/images/image-2.jpg"
+                    alt="Imagem do projeto Manage It"
+                  />
+
+                  <div class="projects__button--black">
+                    <a class="button--black" href="subpages/manage-it.html"
+                      >visitar site
+                      <i class="fas fa-arrow-right button__arrow-icon"></i
+                    ></a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="projects__item" data-slide="3">
+                <div class="projects__text">
+                  <h2 class="title--h2">
+                    Conteúdo é Rei! Website para agência.
+                  </h2>
+                  <p class="paragraph">
+                    Website para agência de conteúdo digital.
+                  </p>
+
+                  <div class="projects__button--green">
+                    <a class="button--green" href="subpages/manage-it.html"
+                      >ver projeto</a
+                    >
+                  </div>
+                </div>
+
+                <div class="projects__image">
+                  <img
+                    src="assets/images/image-3.jpg"
+                    alt="Imagem do projeto Website para agência"
+                  />
+
+                  <div class="projects__button--black">
+                    <a class="button--black" href="subpages/manage-it.html"
+                      >visitar site
+                      <i class="fas fa-arrow-right button__arrow-icon"></i
+                    ></a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="projects__item" data-slide="4">
+                <div class="projects__text">
+                  <h2 class="title--h2">Vinyassa! Aplicativo Mobile</h2>
+                  <p class="paragraph">
+                    UX, UI e Prototipação para aplicativo mobile.
+                  </p>
+
+                  <div class="projects__button--green">
+                    <a class="button--green" href="subpages/manage-it.html"
+                      >ver projeto</a
+                    >
+                  </div>
+                </div>
+
+                <div class="projects__image">
+                  <img
+                    src="assets/images/image-4.jpg"
+                    alt="Imagem do projeto Vinyassa"
+                  />
+
+                  <div class="projects__button--black">
+                    <a class="button--black" href="subpages/manage-it.html"
+                      >visitar site
+                      <i class="fas fa-arrow-right button__arrow-icon"></i
+                    ></a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="projects__item" data-slide="5">
+                <div class="projects__text">
+                  <h2 class="title--h2">Controle Total. Web App</h2>
+                  <p class="paragraph">
+                    UX, UI e Prototipação para aplicativo web.
+                  </p>
+
+                  <div class="projects__button--green">
+                    <a class="button--green" href="subpages/manage-it.html"
+                      >ver projeto</a
+                    >
+                  </div>
+                </div>
+
+                <div class="projects__image">
+                  <img
+                    src="assets/images/image-5.jpg"
+                    alt="Imagem do projeto Controle Total"
+                  />
+
+                  <div class="projects__button--black">
+                    <a class="button--black" href="subpages/manage-it.html"
+                      >visitar site
+                      <i class="fas fa-arrow-right button__arrow-icon"></i
+                    ></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="preview__navigator">
+            <div class="preview__counter">
+              <span class="preview__number">01</span>
+            </div>
+
+            <div class="preview__marker--box">
+              <span class="preview__marker active" data-nav="1"></span>
+              <span class="preview__marker" data-nav="2"></span>
+              <span class="preview__marker" data-nav="3"></span>
+              <span class="preview__marker" data-nav="4"></span>
+              <span class="preview__marker" data-nav="5"></span>
+            </div>
+
+            <div class="next-prev">
+              <i class="fas fa-caret-left prev-icon"></i>
+              <div class="next-prev__counter">
+                <span class="next-prev__current-slider">01</span>/<span
+                  class="next-prev__total-slider"
+                ></span>
+              </div>
+              <i class="fas fa-caret-right next-icon"></i>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!--=== CONTACT ===-->
+    <div class="contact-info">
+      <div class="contact-info__text">
+        <h4 class="contact-info__title">Contato</h4>
+        <p class="paragraph">hello@joaogreen.com</p>
+        <p class="paragraph">+55 62 99876-1234</p>
+      </div>
+
+      <div class="contact-info__social">
+        <a href="https://instagram.com" rel="noopener" target="_blank">
+          <img
+            class="social__icon"
+            src="assets/images/icon-instagram.svg"
+            alt="Instagram"
+          />
+        </a>
+        <a href="https://twitter.com" rel="noopener" target="_blank">
+          <img
+            class="social__icon"
+            src="assets/images/icon-twitter.svg"
+            alt="Twitter"
+          />
+        </a>
+        <a href="https://dribbble.com" rel="noopener" target="_blank">
+          <img
+            class="social__icon"
+            src="assets/images/icon-dribbble.svg"
+            alt="Dribbble"
+          />
+        </a>
+      </div>
+
+      <img
+        class="contact-info__corner"
+        src="assets/images/corner.svg"
+        alt=""
+        aria-label="Ilustração de caixa"
+      />
+    </div>
+
+    <button
+      type="button"
+      class="contact-button"
+      aria-label="Botão De Contato"
+    ></button>
+
+    <script
+      src="https://kit.fontawesome.com/553104d029.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
