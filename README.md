@@ -3,20 +3,17 @@
   <img align="right" width="25%" src="./readme-files/lemon-logo.svg">
 </div>
 <br>
-<br>
 
 <div>
   <h3>🖥️ Desktop</h3>
   <img align="center" width="100%" src="readme-files/desktop-preview.gif">
 </div>
 <br>
-<br>
 
 <div>
   <h3>📱 Mobile</h3>
   <img align="center" width="50%" src="readme-files/mobile-preview.gif">
 </div>
-<br>
 <br>
 
 #
