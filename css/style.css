@@ -660,7 +660,7 @@ img {
 }
 
 .form__text .close-icon {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
 }
 
 .form__text .title--h3 {
@@ -1291,10 +1291,6 @@ input:-webkit-autofill {
 
   .form__text {
     margin-bottom: 2.688rem;
-  }
-
-  .form__text .close-icon {
-    font-size: 1.45rem;
   }
 
   .form__input {
